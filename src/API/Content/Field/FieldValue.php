@@ -5,6 +5,6 @@
 
 namespace Geega\API\Content\Field;
 
-abstract class FieldValue {
+abstract class FieldValue extends Field {
 
 }
