@@ -5,26 +5,7 @@
 
 namespace Geega\API\Content;
 
-abstract class ContentClass {
-
-	// table id + database unique id
-	protected $id;
-	protected $remoteId;
-
-	// group
-	protected $groupId;
-
-	// creator + lastet editor
-	protected $createdBy;
-	protected $updatedBy;
-
-	// version
-	protected $version;
-
-	// timestamps
-	protected $createdAt;
-	protected $updatedAt;
-	protected $deletedAt;	// ???
+abstract class ContentClass extends BaseObject {
 
 	// field types
 	protected $fields;
