@@ -18,6 +18,10 @@ abstract class BaseObject {
 	// version
 	protected $version;
 
+	// language
+	protected $translatable;
+	protected $mainLanguage;
+
 	// timestamps
 	protected $createdAt;
 	protected $updatedAt;
