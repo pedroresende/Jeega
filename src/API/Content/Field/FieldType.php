@@ -5,6 +5,6 @@
 
 namespace Geega\API\Content\Field;
 
-interface FieldType {
+abstract class FieldType {
 
 }
