@@ -1,1 +1,1 @@
-### Geega CMS
+### Jeega CMS
