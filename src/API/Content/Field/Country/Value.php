@@ -7,7 +7,7 @@ namespace Geega\API\Content\Field\Country;
 
 use Geega\API\Content\Field\FieldValue;
 
-abstract class Value implements FieldValue {
+abstract class Value extends FieldValue {
 
     /**
      * Complete associative array with Alpha2 as key and country data as values
@@ -37,4 +37,5 @@ abstract class Value implements FieldValue {
      * @var array[]
      */
 	public $countries = array();
+
 }

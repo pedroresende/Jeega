@@ -7,7 +7,7 @@ namespace Geega\API\Content\Field\Country;
 
 use Geega\API\Content\Field\FieldType;
 
-abstract class Type implements FieldType {
+abstract class Type extends FieldType {
 
 	/**
      * Array with Alpha2, Alpha3 or numeric code
@@ -27,4 +27,5 @@ abstract class Type implements FieldType {
      * @var array[]
      */
 	public $countries = array();
+
 }
