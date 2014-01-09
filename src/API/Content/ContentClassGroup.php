@@ -12,5 +12,5 @@ abstract class ContentClassGroup {
 
 	// editable properties
 	public $names;
-	
+
 }
