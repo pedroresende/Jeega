@@ -26,6 +26,9 @@ abstract class ContentClass {
 	protected $updatedAt;
 	protected $deletedAt;	// ???
 
+	// field types
+	protected $fields;
+
 	// user changeable properties
 	public $names;
 	public $identifier;
