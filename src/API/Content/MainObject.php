@@ -23,7 +23,4 @@ abstract class BaseObject {
 	protected $updatedAt;
 	protected $deletedAt;
 
-	// field types
-	protected $fields;
-
 }
