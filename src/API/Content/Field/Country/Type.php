@@ -3,9 +3,9 @@
  * File containing the Type class of Country
  */
 
-namespace Geega\API\Content\Field\Country;
+namespace Jeega\API\Content\Field\Country;
 
-use Geega\API\Content\Field\FieldType;
+use Jeega\API\Content\Field\FieldType;
 
 abstract class Type extends FieldType {
 

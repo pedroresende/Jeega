@@ -3,7 +3,7 @@
  * File containing the ContentClass class
  */
 
-namespace Geega\API\Content;
+namespace Jeega\API\Content;
 
 abstract class ContentClass extends BaseObject {
 

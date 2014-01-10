@@ -3,9 +3,9 @@
  * File containing the Value class of Country
  */
 
-namespace Geega\API\Content\Field\Country;
+namespace Jeega\API\Content\Field\Country;
 
-use Geega\API\Content\Field\FieldValue;
+use Jeega\API\Content\Field\FieldValue;
 
 abstract class Value extends FieldValue {
 

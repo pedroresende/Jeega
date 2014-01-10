@@ -3,7 +3,7 @@
  * File containing the BaseObject class
  */
 
-namespace Geega\API;
+namespace Jeega\API;
 
 /**
  * Main object class,

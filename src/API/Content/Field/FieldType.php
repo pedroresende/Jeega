@@ -3,7 +3,7 @@
  * File containing the FieldType class
  */
 
-namespace Geega\API\Content\Field;
+namespace Jeega\API\Content\Field;
 
 abstract class FieldType extends Field {
 
