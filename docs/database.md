@@ -18,13 +18,15 @@ Status
 
 # System Block
 
-### Remote_IDs is a table with unique IDs for each kind of object as class, object, user...
-### This will make a multi system comunication much easier
+* Remote_IDs is a table with unique IDs for each kind of object as class, object, user...
+* This will make a multi system comunication much easier
+
+
 TABLE REMOTE_IDS
     ID                  - VARCHAR(32)       - opt:PUN 
     
 # Language Block
-### TODO
+* TODO
 
 TABLE LANGUAGE
     ID                  - UNSIGNED INTEGER  - opt:PAUN
@@ -33,15 +35,16 @@ TABLE LANGUAGE
     ALPHA3              - VARCHAR(3)        - opt:UN
     
 # User Block
-### TODO
+* TODO
 
 TABLE USERS
     ID                  - UNSIGNED INTEGER  - opt:PAUN
 
 # Class Block
 
-### Class groups serve to aggregate the classes into logical groups
-### the group detais are the displayable data in the possible languages
+* Class groups serve to aggregate the classes into logical groups
+* the group detais are the displayable data in the possible languages
+
 TABLE CLASS_GROUPS
     ID                  - UNSIGNED INTEGER  - opt:PAUN
     REMOTE_ID           - opt:F
