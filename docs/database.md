@@ -1,6 +1,6 @@
-### Some definitions ###
+# Some definitions
 
-# Column options
+### Column options
 opt: options / indexes
     - P: primary key
     - F: foreign key
@@ -10,22 +10,21 @@ opt: options / indexes
     - I: indexed
     - D=?: default value is "?"
 
-# Versions options
+### Versions options
 Status
     1 - ARCHIVED
     2 - PUBLISHED
     3 - DRAFT
 
-### System Block ###
+# System Block
 
-###
-# Remote_IDs is a table with unique IDs for each kind of object as class, object, user...
-# This will make a multi system comunication much easier
+### Remote_IDs is a table with unique IDs for each kind of object as class, object, user...
+### This will make a multi system comunication much easier
 TABLE REMOTE_IDS
     ID                  - VARCHAR(32)       - opt:PUN 
     
-### Language Block ###
-# TODO
+# Language Block
+### TODO
 
 TABLE LANGUAGE
     ID                  - UNSIGNED INTEGER  - opt:PAUN
@@ -33,17 +32,16 @@ TABLE LANGUAGE
     ALPHA2              - VARCHAR(2)        - opt:UN
     ALPHA3              - VARCHAR(3)        - opt:UN
     
-### User Block ###
-# TODO
+# User Block
+### TODO
 
 TABLE USERS
     ID                  - UNSIGNED INTEGER  - opt:PAUN
 
-### Class Block ###
+# Class Block
 
-###
-# Class groups serve to aggregate the classes into logical groups
-# the group detais are the displayable data in the possible languages
+### Class groups serve to aggregate the classes into logical groups
+### the group detais are the displayable data in the possible languages
 TABLE CLASS_GROUPS
     ID                  - UNSIGNED INTEGER  - opt:PAUN
     REMOTE_ID           - opt:F
