@@ -10,8 +10,11 @@ opt: options / indexes
     - I: indexed
     - D=?: default value is "?"
 
-# Version status
-1 - 
+# Versions options
+Status
+    1 - ARCHIVED
+    2 - PUBLISHED
+    3 - DRAFT
 
 ### System Block ###
 
