@@ -1,4 +1,7 @@
-# Some definitions
+
+# Database thoughs
+
+## Some definitions
 
 ### Column options
 opt: options / indexes
@@ -20,7 +23,7 @@ Status
     3 - DRAFT
 ```
 
-# System Block
+## System Block
 
 * Remote_IDs is a table with unique IDs for each kind of object as class, object, user...
 * This will make a multi system comunication much easier
@@ -31,7 +34,7 @@ TABLE REMOTE_IDS
     ID                  - VARCHAR(32)       - opt:PUN 
 ```
 
-# Class Block
+## Class Block
 
 * Class groups serve to aggregate the classes into logical groups
 * the group detais are the displayable data in the possible languages
@@ -118,7 +121,7 @@ TABLE FIELDTYPE_DEFINITIONS
     SETTINGS            - TEXT
 ```
     
-# Language Block
+## Language Block
 * TODO
 
 TABLE LANGUAGE
@@ -129,7 +132,7 @@ TABLE LANGUAGE
     ALPHA3              - VARCHAR(3)        - opt:UN
 ```
 
-# User Block
+## User Block
 * TODO
 
 TABLE USERS
@@ -137,22 +140,22 @@ TABLE USERS
     ID                  - UNSIGNED INTEGER  - opt:PAUN
 ```
 
-# Validation Block
+## Validation Block
 * TODO
 
-# Object Block
+## Object Block
 * TODO
 
-# Locations Block
+## Locations Block
 * TODO
 
-# Permissions Block
+## Permissions Block
 * TODO
 
-# Workflow Block
+## Workflow Block
 * TODO
 
-# Web Store Block
+## Web Store Block
 * TODO
 
 
