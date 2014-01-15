@@ -33,7 +33,7 @@ Status
 
 TABLE REMOTE_IDS
 ```
-    ID                  - VARCHAR(32)       - opt:PUN 
+    ID                  - VARCHAR(32)       - opt:PUN
 ```
 
 ## Class Block
@@ -61,9 +61,8 @@ TABLE CLASS_GROUP_DETAILS
 TABLE CLASSES
 ```
     ID                  - UNSIGNED INTEGER  - opt:PAUN
-    CLASS_GROUP_ID      - opt:F 
+    CLASS_GROUP_ID      - opt:F
     REMOTE_ID           - opt:F
-    MAIN_LANGUAGE_ID    - opt:F            
     IDENTIFIER          - VARCHAR(32)       - opt:I
     ENABLED             - BOOL              - opt:D=1
     CREATED_BY          - opt:F
@@ -73,9 +72,10 @@ TABLE CLASSES
 
 TABLE CLASS_VERSION
 ```
-    ID                  - UNSIGNED INTEGER  - opt:PAN
+    CLASS_ID            - UNSIGNED INTEGER  - opt:PAN
     VERSION             - UNSIGNED INTEGER  - opt:PN
     VERSION_STATUS      - INTEGER           - opt:ND=1
+    MAIN_LANGUAGE_ID    - opt:F
     OBJECT_NAME_PATTERN - VARCHAR(255)
     CREATED_AT          - TIMESTAMP
     DELETED_AT          - TIMESTAMP
@@ -124,7 +124,7 @@ TABLE FIELDTYPE_DEFINITIONS
     TEXT                - TEXT
     SETTINGS            - TEXT
 ```
- 
+
 ## Language Block
 * TODO
 
