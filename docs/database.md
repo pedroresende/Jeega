@@ -20,6 +20,7 @@ Status
     1 - ARCHIVED
     2 - PUBLISHED
     3 - DRAFT
+    4 - DELETED
 ```
 
 ### Tables information
