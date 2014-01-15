@@ -23,6 +23,9 @@ Status
     3 - DRAFT
 ```
 
+### Tables information
+* <some_table>_details - "some_table" details table will have the displayable data with the specific language
+
 ## System Block
 
 * Remote_IDs is a table with unique IDs for each kind of object as class, object, user...
@@ -37,7 +40,8 @@ TABLE REMOTE_IDS
 ## Class Block
 
 * Class groups serve to aggregate the classes into logical groups
-* the group detais are the displayable data in the possible languages
+* Classes define the possible objects to be created
+* Fieldtypes are the fields that the objects will have
 
 TABLE CLASS_GROUPS
 ```
