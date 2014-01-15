@@ -48,6 +48,9 @@ TABLE CLASS_GROUPS
     REMOTE_ID           - opt:F
     MAIN_LANGUAGE_ID    - opt:F
     IDENTIFIER          - VARCHAR(32)       - opt:I
+    CREATED_BY          - opt:F
+    CREATED_AT          - TIMESTAMP
+    DELETED_AT          - TIMESTAMP
 ```
 
 TABLE CLASS_GROUP_DETAILS
@@ -107,7 +110,6 @@ TABLE FIELDTYPES
 TABLE FIELDTYPE_DETAILS
 ```
     FIELDTYPE_ID        - opt:PF
-    LANGUAGE_ID         - opt:PF
     NAME                - VARCHAR(255)      - opt:N
     DESCRIPTION         - TEXT
     TIP                 - VARCHAR(2048)
