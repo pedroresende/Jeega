@@ -1,4 +1,3 @@
-
 # Database thoughs
 
 ## Some definitions
@@ -80,8 +79,8 @@ TABLE CLASS_VERSION
     OBJECT_NAME_PATTERN - VARCHAR(255)
     CREATED_AT          - TIMESTAMP
     DELETED_AT          - TIMESTAMP
- ```
- 
+```
+
 TABLE CLASS_DETAILS
 ```
     CLASS_ID            - opt:PF
@@ -90,7 +89,7 @@ TABLE CLASS_DETAILS
     NAME                - VARCHAR(255)      - opt:N
     DESCRIPTION         - TEXT
 ```
-    
+
 TABLE FIELDTYPES
 ```
     ID                  - UNSIGNED INTEGER  - opt:PAN
@@ -111,8 +110,9 @@ TABLE FIELDTYPE_DETAILS
     LANGUAGE_ID         - opt:PF
     NAME                - VARCHAR(255)      - opt:N
     DESCRIPTION         - TEXT
+    TIP                 - VARCHAR(2048)
 ```
-    
+
 TABLE FIELDTYPE_DEFINITIONS
 ```
     FIELDTYPE_ID        - opt:PF
@@ -124,7 +124,7 @@ TABLE FIELDTYPE_DEFINITIONS
     TEXT                - TEXT
     SETTINGS            - TEXT
 ```
-    
+ 
 ## Language Block
 * TODO
 
@@ -161,5 +161,3 @@ TABLE USERS
 
 ## Web Store Block
 * TODO
-
-
