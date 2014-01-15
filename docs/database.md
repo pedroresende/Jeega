@@ -30,25 +30,6 @@ TABLE REMOTE_IDS
 ```
     ID                  - VARCHAR(32)       - opt:PUN 
 ```
-    
-# Language Block
-* TODO
-
-TABLE LANGUAGE
-```
-    ID                  - UNSIGNED INTEGER  - opt:PAUN
-    LANGUAGE            - VARCHAR(32)       - opt:UN
-    ALPHA2              - VARCHAR(2)        - opt:UN
-    ALPHA3              - VARCHAR(3)        - opt:UN
-```
-    
-# User Block
-* TODO
-
-TABLE USERS
-```
-    ID                  - UNSIGNED INTEGER  - opt:PAUN
-```
 
 # Class Block
 
@@ -136,3 +117,42 @@ TABLE FIELDTYPE_DEFINITIONS
     TEXT                - TEXT
     SETTINGS            - TEXT
 ```
+    
+# Language Block
+* TODO
+
+TABLE LANGUAGE
+```
+    ID                  - UNSIGNED INTEGER  - opt:PAUN
+    LANGUAGE            - VARCHAR(32)       - opt:UN
+    ALPHA2              - VARCHAR(2)        - opt:UN
+    ALPHA3              - VARCHAR(3)        - opt:UN
+```
+
+# User Block
+* TODO
+
+TABLE USERS
+```
+    ID                  - UNSIGNED INTEGER  - opt:PAUN
+```
+
+# Validation Block
+* TODO
+
+# Object Block
+* TODO
+
+# Locations Block
+* TODO
+
+# Permissions Block
+* TODO
+
+# Workflow Block
+* TODO
+
+# Web Store Block
+* TODO
+
+
