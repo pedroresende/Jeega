@@ -111,6 +111,7 @@ TABLE FIELDTYPE_DETAILS
 ```
     FIELDTYPE_ID        - opt:PF
     NAME                - VARCHAR(255)      - opt:N
+    LANGUAGE_ID         - opt:PF
     DESCRIPTION         - TEXT
     TIP                 - VARCHAR(2048)
 ```
@@ -118,7 +119,6 @@ TABLE FIELDTYPE_DETAILS
 TABLE FIELDTYPE_DEFINITIONS
 ```
     FIELDTYPE_ID        - opt:PF
-    LANGUAGE_ID         - opt:PF
     FLOAT               - FLOAT
     INTEGER             - INTEGER
     STRING              - VARCHAR(2048)
