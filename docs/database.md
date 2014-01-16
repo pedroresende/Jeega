@@ -33,7 +33,7 @@ Status
 
 TABLE REMOTE_IDS
 ```
-	ID						- VARCHAR(32)			- opt:PUN
+	ID						- VARCHAR(255)			- opt:PUN
 ```
 
 ## Class Block
@@ -47,7 +47,7 @@ TABLE CLASS_GROUPS
 	ID						- UNSIGNED INTEGER		- opt:PAUN
 	REMOTE_ID				- opt:FN
 	MAIN_LANGUAGE_ID		- opt:FN
-	IDENTIFIER				- VARCHAR(32)			- opt:IN
+	IDENTIFIER				- VARCHAR(255)			- opt:IN
 ```
 
 TABLE CLASS_GROUP_DETAILS
@@ -63,7 +63,7 @@ TABLE CLASSES
 	ID						- UNSIGNED INTEGER		- opt:PAUN
 	CLASS_GROUP_ID			- opt:FN
 	REMOTE_ID				- opt:FN
-	IDENTIFIER				- VARCHAR(32)			- opt:IN
+	IDENTIFIER				- VARCHAR(255)			- opt:IN
 	ENABLED					- BOOL					- opt:D=1
 	CREATED_BY				- opt:FN
 	CREATED_AT				- TIMESTAMP				- opt:N
@@ -95,8 +95,8 @@ TABLE FIELDTYPES
 	ID						- UNSIGNED INTEGER		- opt:PAN
 	CLASS_ID				- opt:FN
 	VERSION					- opt:FN
-	TYPE					- VARCHAR(32)			- opt:N
-	IDENTFIER				- VARCHAR(32)			- opt:IN
+	TYPE					- VARCHAR(255)			- opt:N
+	IDENTFIER				- VARCHAR(255)			- opt:IN
 	POSITION				- INTEGER
 	TRANSLATABLE			- BOOL					- opt:ND=1
 	INFO_COLLECTOR			- BOOL					- opt:ND=0
@@ -190,9 +190,9 @@ TABLE LOCATIONS
 TABLE LANGUAGE
 ```
 	ID					- UNSIGNED INTEGER		- opt:PAUN
-	LANGUAGE			- VARCHAR(63)			- opt:UN
-	ALPHA2				- VARCHAR(31)			- opt:UN
-	ALPHA3				- VARCHAR(31)			- opt:UN
+	LANGUAGE			- VARCHAR(255)			- opt:UN
+	ALPHA2				- VARCHAR(255)			- opt:UN
+	ALPHA3				- VARCHAR(255)			- opt:UN
 ```
 
 ## User Block
