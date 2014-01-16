@@ -100,7 +100,6 @@ TABLE FIELDTYPES
 	POSITION				- INTEGER
 	TRANSLATABLE			- BOOL					- opt:ND=1
 	INFO_COLLECTOR			- BOOL					- opt:ND=0
-	REQUIRED				- BOOL					- opt:ND=0
 	SEARCHEABLE				- BOOL					- opt:ND=1
 ```
 
@@ -186,7 +185,6 @@ TABLE LOCATIONS
 ```
 
 ## Language Block
-* TODO
 
 TABLE LANGUAGE
 ```
@@ -197,15 +195,14 @@ TABLE LANGUAGE
 ```
 
 ## User Block
-* TODO
 
 TABLE USERS
 ```
 	ID					- UNSIGNED INTEGER		- opt:PAUN
+	PASSWORD			- VARCHAR(255)			- opt:N
+	EMAIL				- VARCHAR(255)
+	USERNAME			- VARCHAR(255)
 ```
-
-## Validation Block
-* TODO
 
 ## Permissions Block
 * TODO
