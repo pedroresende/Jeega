@@ -5,21 +5,21 @@
 ### Column options
 opt: options / indexes
 ```
-    - P: primary key
-    - F: foreign key
-    - A: auto increment
-    - U: unique
-    - N: not null
-    - I: indexed
-    - D=?: default value is "?"
+	- P: primary key
+	- F: foreign key
+	- A: auto increment
+	- U: unique
+	- N: not null
+	- I: indexed
+	- D=?: default value is "?"
 ```
 
 ### Versions options
 Status
 ```
-    1 - ARCHIVED
-    2 - PUBLISHED
-    3 - DRAFT
+	1 - DRAFT			- draft every version that hasn't been published
+	2 - PUBLISHED		- published version ( can only be 1 version published per object )
+	3 - ARCHIVED		- old published versions
 ```
 
 ### Tables information
@@ -33,7 +33,7 @@ Status
 
 TABLE REMOTE_IDS
 ```
-    ID                  - VARCHAR(32)       - opt:PUN
+	ID						- VARCHAR(32)			- opt:PUN
 ```
 
 ## Class Block
@@ -44,85 +44,86 @@ TABLE REMOTE_IDS
 
 TABLE CLASS_GROUPS
 ```
-    ID                  - UNSIGNED INTEGER  - opt:PAUN
-    REMOTE_ID           - opt:F
-    MAIN_LANGUAGE_ID    - opt:F
-    IDENTIFIER          - VARCHAR(32)       - opt:I
+	ID						- UNSIGNED INTEGER		- opt:PAUN
+	REMOTE_ID				- opt:FN
+	MAIN_LANGUAGE_ID		- opt:FN
+	IDENTIFIER				- VARCHAR(32)			- opt:IN
 ```
 
 TABLE CLASS_GROUP_DETAILS
 ```
-    CLASS_GROUP_ID      - opt:PF
-    LANGUAGE_ID         - opt:PF
-    NAME                - VARCHAR(255)      - opt:N
-    DESCRIPTION         - TEXT
+	CLASS_GROUP_ID			- opt:PF
+	LANGUAGE_ID				- opt:PF
+	NAME- VARCHAR(255)		- opt:N
+	DESCRIPTION				- TEXT
 ```
 
 TABLE CLASSES
 ```
-    ID                  - UNSIGNED INTEGER  - opt:PAUN
-    CLASS_GROUP_ID      - opt:F
-    REMOTE_ID           - opt:F
-    IDENTIFIER          - VARCHAR(32)       - opt:I
-    ENABLED             - BOOL              - opt:D=1
-    CREATED_BY          - opt:F
-    CREATED_AT          - TIMESTAMP
-    DELETED_AT          - TIMESTAMP
+	ID						- UNSIGNED INTEGER		- opt:PAUN
+	CLASS_GROUP_ID			- opt:FN
+	REMOTE_ID				- opt:FN
+	IDENTIFIER				- VARCHAR(32)			- opt:IN
+	ENABLED					- BOOL					- opt:D=1
+	CREATED_BY				- opt:FN
+	CREATED_AT				- TIMESTAMP				- opt:N
+	DELETED_AT				- TIMESTAMP
 ```
 
 TABLE CLASS_VERSION
 ```
-    CLASS_ID            - UNSIGNED INTEGER  - opt:PAN
-    VERSION             - UNSIGNED INTEGER  - opt:PN
-    VERSION_STATUS      - INTEGER           - opt:ND=1
-    MAIN_LANGUAGE_ID    - opt:F
-    OBJECT_NAME_PATTERN - VARCHAR(255)
-    CREATED_AT          - TIMESTAMP
-    DELETED_AT          - TIMESTAMP
+	CLASS_ID				- UNSIGNED INTEGER		- opt:PAN
+	VERSION					- INTEGER				- opt:PN
+	VERSION_STATUS			- INTEGER				- opt:ND=1
+	MAIN_LANGUAGE_ID		- opt:FN
+	OBJECT_NAME_PATTERN		- VARCHAR(255)
+	CREATED_BY				- opt:FN
+	CREATED_AT				- TIMESTAMP				- opt:N
 ```
 
 TABLE CLASS_DETAILS
 ```
-    CLASS_ID            - opt:PF
-    CLASS_VERSION       - opt:PF
-    LANGUAGE_ID         - opt:PF
-    NAME                - VARCHAR(255)      - opt:N
-    DESCRIPTION         - TEXT
+	CLASS_ID				- opt:PF
+	CLASS_VERSION			- opt:PF
+	LANGUAGE_ID				- opt:PF
+	NAME- VARCHAR(255)		- opt:N
+	DESCRIPTION				- TEXT
 ```
 
 TABLE FIELDTYPES
 ```
-    ID                  - UNSIGNED INTEGER  - opt:PAN
-    CLASS_ID            - opt:F
-    VERSION             - opt:F
-    TYPE                - VARCHAR(32)       - opt:N
-    IDENTFIER           - VARCHAR(32)       - opt:IN
-    POSITION            - INTEGER
-    TRANSLATABLE        - BOOL              - opt:ND=1
-    INFO_COLLECTOR      - BOOL              - opt:ND=0
-    REQUIRED            - BOOL              - opt:ND=0
-    SEARCHEABLE         - BOOL              - opt:ND=1
+	ID						- UNSIGNED INTEGER		- opt:PAN
+	CLASS_ID				- opt:FN
+	VERSION					- opt:FN
+	TYPE					- VARCHAR(32)			- opt:N
+	IDENTFIER				- VARCHAR(32)			- opt:IN
+	POSITION				- INTEGER
+	TRANSLATABLE			- BOOL					- opt:ND=1
+	INFO_COLLECTOR			- BOOL					- opt:ND=0
+	REQUIRED				- BOOL					- opt:ND=0
+	SEARCHEABLE				- BOOL					- opt:ND=1
 ```
 
 TABLE FIELDTYPE_DETAILS
 ```
-    FIELDTYPE_ID        - opt:PF
-    LANGUAGE_ID         - opt:PF
-    NAME                - VARCHAR(255)      - opt:N
-    DESCRIPTION         - TEXT
-    TIP                 - VARCHAR(2048)
+	FIELDTYPE_ID			- opt:PF
+	LANGUAGE_ID				- opt:PF
+	NAME					- VARCHAR(255)			- opt:N
+	DESCRIPTION				- TEXT
+	TIP						- VARCHAR(2047)
 ```
 
 TABLE FIELDTYPE_DEFINITIONS
 ```
-    FIELDTYPE_ID        - opt:PF
-    LANGUAGE_ID         - opt:PF
-    FLOAT               - FLOAT
-    INTEGER             - INTEGER
-    STRING              - VARCHAR(2048)
-    KEY                 - VARCHAR(2048)
-    TEXT                - TEXT
-    SETTINGS            - TEXT
+	FIELDTYPE_ID			- opt:PF
+	LANGUAGE_ID				- opt:PF
+	FLOAT					- FLOAT
+	INTEGER					- INTEGER
+	STRING					- VARCHAR(2047)
+	KEY						- VARCHAR(2047)
+	TEXT					- TEXT
+	DATETIME				- DATETIME
+	SETTINGS				- TEXT
 ```
 
 ## Language Block
@@ -130,10 +131,10 @@ TABLE FIELDTYPE_DEFINITIONS
 
 TABLE LANGUAGE
 ```
-    ID                  - UNSIGNED INTEGER  - opt:PAUN
-    LANGUAGE            - VARCHAR(32)       - opt:UN
-    ALPHA2              - VARCHAR(2)        - opt:UN
-    ALPHA3              - VARCHAR(3)        - opt:UN
+	ID					- UNSIGNED INTEGER		- opt:PAUN
+	LANGUAGE			- VARCHAR(63)			- opt:UN
+	ALPHA2				- VARCHAR(31)			- opt:UN
+	ALPHA3				- VARCHAR(31)			- opt:UN
 ```
 
 ## User Block
@@ -141,16 +142,10 @@ TABLE LANGUAGE
 
 TABLE USERS
 ```
-    ID                  - UNSIGNED INTEGER  - opt:PAUN
+	ID					- UNSIGNED INTEGER		- opt:PAUN
 ```
 
 ## Validation Block
-* TODO
-
-## Object Block
-* TODO
-
-## Locations Block
 * TODO
 
 ## Permissions Block
