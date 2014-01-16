@@ -253,3 +253,4 @@ TABLE USER_OLD_PASSWORDS
 
 # Other ideas
 - logging database vs files?
+- link users to several objects ( complementing the profile, ... )
