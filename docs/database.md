@@ -236,3 +236,6 @@ TABLE USERS
 
 ## Web Store Block
 * TODO
+
+# Other ideas
+- logging database vs files?
