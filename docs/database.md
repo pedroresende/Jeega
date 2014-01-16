@@ -126,6 +126,65 @@ TABLE FIELDTYPE_DEFINITIONS
 	SETTINGS				- TEXT
 ```
 
+## Object Block
+
+TABLE OBJECTS
+```
+	ID					- UNSIGNED INTEGER		- opt:PAUN
+	REMOTE_ID			- opt:FN
+	SECTION_ID			- opt:FN
+	CREATED_BY			- opt:FN
+	CREATED_AT			- TIMESTAMP				- opt:N
+	DELETED_AT			- TIMESTAMP
+```
+
+TABLE OBJECT_VERSIONS
+```
+	OBJECT_ID			- opt:PF
+	VERSION				- INTEGER				- opt:PN
+	CLASS_ID			- opt:F
+	VERSION_ID			- opt:F
+	MAIN_LANGUAGE_ID	- opt:F
+	VERSION_STATUS		- INTEGER				- opt:ND=1
+	AUTOSAVE			- BOOL					- opt:ND=0
+```
+
+TABLE FIELDS
+```
+	ID					- UNSIGNED INTEGER		- opt:PAUN
+	OBJECT_ID			- opt:F
+	OBJECT_VERSION		- opt:F
+	FIELDTYPE_ID		- opt:F
+```
+
+TABLE FIELD_VALUES
+```
+	FIELD_ID			- opt:PF
+	LANGUAGE_ID			- opt:PF
+	FLOAT				- FLOAT
+	INTEGER				- INTEGER
+	STRING				- VARCHAR(2047)
+	TEXT				- TEXT
+	DATETIME			- DATETIME
+	SETTINGS			- TEXT
+```
+
+## Locations Block
+
+TABLE LOCATIONS
+```
+	ID					- UNSIGNED INTEGER		- opt:PAUN
+	OBJECT_ID			- opt:FN
+	REMOTE_ID			- opt:FN
+	PARENT_LOCATION_ID	- opt:F
+	HIDDEN				- BOOL					- opt:ND=0
+	TREE_PATH			- TEXT					- opt:IN
+	TREE_PATH_IDS		- VARCHAR(255)			- opt:IN
+	DEPTH				- INTEGER				- opt:IN
+	PRIORITY			- INTEGER				- opt:ND=1
+	TOTAL_VIEWS			- INTEGER				- opt:ND=0
+```
+
 ## Language Block
 * TODO
 
