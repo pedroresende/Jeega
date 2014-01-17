@@ -243,7 +243,31 @@ TABLE USER_OLD_PASSWORDS
 ```
 
 ## Permissions Block
-* TODO
+
+TABLE PERMISSION_ROLES
+```
+	ID					- UNSIGNED INTEGER		- opt:PAUN
+	USER_ID				- opt:F
+	USER_GROUP_ID		- opt:F
+	NAME				- VARCHAR(255)			- opt:N
+	ADMIN				- BOOL					- opt:ND=0
+	VERSION				- INTEGER				- opt:ND=1
+```
+
+TABLE PERMISSION_POLICIES
+```
+	ID					- UNSIGNED INTEGER		- opt:PAUN
+	PERMISSION_ROLE_ID	- opt:FN
+	MODULE				- VARCHAR(255)			- opt:N
+	ACTION				- VARCHAR(255)			- opt:ND=*
+```
+
+TABLE PERMISSION_LIMITATIONS
+```
+	ID					- UNSIGNED INTEGER		- opt:PAUN
+	PERMISSION_POLICY_ID- opt:FN
+	LIMITATIONS			- TEXT					- opt:N
+```
 
 ## Workflow Block
 * TODO
